@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Expression utility objects</title>
+<style>
+	table {
+		border-collapse: collapse;
+	}
+	
+	td {
+		border: 1px solid black;
+		padding: .5em;
+	}
+</style>
+</head>
+<body>
+	
+	<h1>Conditional Rendering using Thymeleaf</h1>
+	<table>
+		<tr>
+			<td></td>
+			<td>th:if</td>
+			<td>th:unless</td>
+		</tr>
+		<tr>
+			<td>true</td>
+			<td><span th:if="${true}">is raining</span></td>
+			<td><span th:unless="${true}">is sunny</span></td>
+		</tr>
+		<tr>
+			<td>false</td>
+			<td><span th:if="${false}">is cold</span></td>
+			<td><span th:unless="${false}">is warm</span></td>
+		</tr>
+	</table>
+	
+	<h1>Boolean and conditional operators</h1>
+	<table>
+		<tr>
+			<td>A</td>
+			<td>B</td>
+			<td>${A or B}</td>
+			<td>${A} or ${B}</td>
+			<td>${A and B}</td>
+			<td>${A} and ${B}</td>
+			<td>${!A}</td>
+			<td>!${A}</td>
+			<td>${not A}</td>
+			<td>not ${A}</td>
+		</tr>
+		<tr>
+			<td>true</td>
+			<td>true</td>
+			<td th:text="${true or true}"></td>
+			<td th:text="${true} or ${true}"></td>
+			<td th:text="${true and true}"></td>
+			<td th:text="${true} and ${true}"></td>
+			<td th:text="${!true}"></td>
+			<td th:text="!${true}"></td>
+			<td th:text="${not true}"></td>
+			<td th:text="not ${true}"></td>
+		</tr>
+		<tr>
+			<td>true</td>
+			<td>false</td>
+			<td th:text="${true or false}"></td>
+			<td th:text="${true} or ${false}"></td>
+			<td th:text="${true and false}"></td>
+			<td th:text="${true} and ${false}"></td>
+			<td th:text="${!true}"></td>
+			<td th:text="!${true}"></td>
+			<td th:text="${not true}"></td>
+			<td th:text="not ${true}"></td>
+		</tr>
+		<tr>
+			<td>false</td>
+			<td>true</td>
+			<td th:text="${false or true}"></td>
+			<td th:text="${false} or ${true}"></td>
+			<td th:text="${false and true}"></td>
+			<td th:text="${false} and ${true}"></td>
+			<td th:text="${!false}"></td>
+			<td th:text="!${false}"></td>
+			<td th:text="${not false}"></td>
+			<td th:text="not ${false}"></td>
+		</tr>
+		<tr>
+			<td>false</td>
+			<td>false</td>
+			<td th:text="${false or false}"></td>
+			<td th:text="${false} or ${false}"></td>
+			<td th:text="${false and false}"></td>
+			<td th:text="${false} and ${false}"></td>
+			<td th:text="${!false}"></td>
+			<td th:text="!${false}"></td>
+			<td th:text="${not false}"></td>
+			<td th:text="not ${false}"></td>
+		</tr>
+	</table>
+	
+	</table>
+</body>
+</html>

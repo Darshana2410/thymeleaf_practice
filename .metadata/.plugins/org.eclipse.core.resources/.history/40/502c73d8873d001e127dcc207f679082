@@ -1,0 +1,10 @@
+package com.example.EmployeeApplication;
+
+public class Employee_Model {
+
+	private String firstName;
+	private String lastName;
+    private String email;
+    private String role;
+    
+}

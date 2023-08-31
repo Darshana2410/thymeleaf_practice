@@ -1,0 +1,27 @@
+package com.example.EmployeeApplication;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Controller
+public class Employee_Controller {
+
+    // if-unless-else condition
+    @GetMapping("if-unless")
+    public String ifUnless(Model model){
+    	
+        Employee ramesh = new Employee("ramesh","ramesh@gmail.com", "ADMIN", "M");
+        Employee admin = new Employee("admin","admin@gmail.com", "ADMIN", "M");
+        Employee meena = new Employee("meena","meena@gmail.com", "USER", "F");
+        List<Employee> employees = new ArrayList<>();
+        users.add(ramesh);
+        users.add(admin);
+        users.add(meena);
+        model.addAttribute("users", users);
+        return "if-unless";
+    }
+}
